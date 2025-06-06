@@ -1,17 +1,17 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import CalculatorScreen from '../components/CalculatorScreen';
-import ToDoListScreen from '../toDoList/ToDoListScreen';
-import ConversorScreen from '../conversor/ConversorScreen';
+import Calculadora from '../../calculadora';
+import Conversor from '../../conversor';
+import ToDoList from '../../toDoList';
 
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Calculadora" component={CalculatorScreen} />
-      <Tab.Screen name="ToDoList" component={ToDoListScreen} />
-      <Tab.Screen name="Conversor" component={ConversorScreen} />
+      <Tab.Screen name="Calculadora" component={Calculadora} />
+      <Tab.Screen name="Conversor" component={Conversor} />
+      <Tab.Screen name="To-Do List" component={ToDoList} />
     </Tab.Navigator>
   );
 }
